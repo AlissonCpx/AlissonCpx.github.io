@@ -77,10 +77,10 @@
                         <label><input id="trans1" type="radio" onchange="main()" name="trans">Street - 38.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="trans2" type="radio" onchange="main()" name="trans">Sport - 45.000</label>
+                        <label><input id="trans2" type="radio" onchange="main()" name="trans">Sport - 46.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="trans3" type="radio" onchange="main()" name="trans">Race - 50.000</label>
+                        <label><input id="trans3" type="radio" onchange="main()" name="trans">Race - 52.000</label>
                     </div>
                 </form>
             </div>
@@ -104,16 +104,16 @@
                 </button>
                 <form style="position: absolute; top: 25px; left: 20px;">
                     <div class="radio">
-                        <label><input id="sus1" onchange="main()" type="radio" name="sus">1º Stage - 27.000</label>
+                        <label><input id="sus1" onchange="main()" type="radio" name="sus">1º Stage - 32.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="sus2" onchange="main()" type="radio" name="sus">2º Stage - 33.000</label>
+                        <label><input id="sus2" onchange="main()" type="radio" name="sus">2º Stage - 39.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="sus3" onchange="main()" type="radio" name="sus">3º Stage - 39.000</label>
+                        <label><input id="sus3" onchange="main()" type="radio" name="sus">3º Stage - 46.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="sus4" onchange="main()" type="radio" name="sus">4º Stage - 45.000</label>
+                        <label><input id="sus4" onchange="main()" type="radio" name="sus">4º Stage - 54.000</label>
                     </div>
                 </form>
             </div>
@@ -139,19 +139,19 @@
                 </button>
                 <form style="position: absolute; top: 25px; left: 20px;">
                     <div class="radio">
-                        <label><input id="blind1" onchange="main()" type="radio" name="blin">1º 20% - 66.000</label>
+                        <label><input id="blind1" onchange="main()" type="radio" name="blin">1º 20% - 84.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="blind2" onchange="main()" type="radio" name="blin">2º 40% - 78.000</label>
+                        <label><input id="blind2" onchange="main()" type="radio" name="blin">2º 40% - 96.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="blind3" onchange="main()" type="radio" name="blin">3º 60% - 90.000</label>
+                        <label><input id="blind3" onchange="main()" type="radio" name="blin">3º 60% - 108.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="blind4" onchange="main()" type="radio" name="blin">4º 80% - 100.000</label>
+                        <label><input id="blind4" onchange="main()" type="radio" name="blin">4º 80% - 117.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="blind5" onchange="main()" type="radio" name="blin">5º 100% - 115.000</label>
+                        <label><input id="blind5" onchange="main()" type="radio" name="blin">5º 100% - 140.000</label>
                     </div>
                 </form>
             </div>
@@ -194,13 +194,13 @@
                         <label><input id="motor1" onchange="main()" type="radio" name="mot">1º Street - 38.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="motor2" onchange="main()" type="radio" name="mot">2º Sport - 45.000</label>
+                        <label><input id="motor2" onchange="main()" type="radio" name="mot">2º Sport - 46.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="motor3" onchange="main()" type="radio" name="mot">3º Race - 50.000</label>
+                        <label><input id="motor3" onchange="main()" type="radio" name="mot">3º Race - 52.000</label>
                     </div>
                     <div class="radio">
-                        <label><input id="motor4" onchange="main()" type="radio" name="mot">4º Top - 57.000</label>
+                        <label><input id="motor4" onchange="main()" type="radio" name="mot">4º Top - 60.000</label>
                     </div>
                 </form>
             </div>
@@ -222,7 +222,7 @@
                         <label><input id="corRodas" onchange="main()" type="checkbox">Cor rod. - 2.000</label>
                         <label><input id="acessRodas" onchange="main()" type="checkbox">Acess. Rod. - 4.000</label>
                         <label><input id="pintPri" onchange="main()" type="checkbox">Pint. Pri. - 4.000</label>
-                        <label><input id="pintSec" onchange="main()" type="checkbox">Pint. Sec. - 2.000</label>
+                        <label><input id="pintSec" onchange="main()" type="checkbox">Pint. Sec. - 4.000</label>
                         <label><input id="placa" onchange="main()" type="checkbox">Placa - 2.000</label>
                     </div>
 
@@ -532,14 +532,14 @@
         }
         if (pintPriCheck.checked) {
             corPri = 4000;
-            corPriL = 3200;
+            corPriL = 0;
         } else {
             corPri = 0;
             corPriL = 0;
         }
         if (pintSecCheck.checked) {
-            corSec = 2000;
-            corSecL = 1200;
+            corSec = 4000;
+            corSecL = 0;
         } else {
             corSec = 0;
             corSecL = 0;
@@ -598,14 +598,14 @@
             motor = 38000;
             motorL = 32000;
         } else if (motorChek2.checked) {
-            motor = 45000;
-            motorL = 37000;
+            motor = 46000;
+            motorL = 38000;
         } else if (motorChek3.checked) {
-            motor = 50000;
-            motorL = 42000;
+            motor = 52000;
+            motorL = 44000;
         } else if (motorChek4.checked) {
-            motor = 57000;
-            motorL = 47000;
+            motor = 60000;
+            motorL = 50000;
         }
     }
 
@@ -629,28 +629,28 @@
             trans = 38000;
             transL = 32000;
         } else if (transChek2.checked) {
-            trans = 45000;
-            transL = 37000;
+            trans = 46000;
+            transL = 38000;
         } else if (transChek3.checked) {
-            trans = 50000;
-            transL = 42000;
+            trans = 52000;
+            transL = 44000;
         }
     }
 
     function suspensao() {
 
         if (susChek1.checked) {
-            sus = 27000;
-            susL = 22500;
+            sus = 32000;
+            susL = 27000;
         } else if (susChek2.checked) {
-            sus = 33000;
-            susL = 27500;
-        } else if (susChek3.checked) {
             sus = 39000;
-            susL = 32500;
+            susL = 33000;
+        } else if (susChek3.checked) {
+            sus = 46000;
+            susL = 39000;
         } else if (susChek4.checked) {
-            sus = 45000
-            susL = 37500
+            sus = 54000
+            susL = 45000
         }
     }
 
@@ -673,20 +673,20 @@
     function blindagem() {
 
         if (blindChek1.checked) {
-            blind = 66000;
-            blindL = 55000;
+            blind = 84000;
+            blindL = 70000;
         } else if (blindChek2.checked) {
-            blind = 78000;
-            blindL = 65000;
+            blind = 96000;
+            blindL = 80000;
         } else if (blindChek3.checked) {
-            blind = 90000;
-            blindL = 75000;
+            blind = 108000;
+            blindL = 90000;
         } else if (blindChek4.checked) {
-            blind = 100000;
-            blindL = 85000;
+            blind = 117000;
+            blindL = 100000;
         } else if (blindChek5.checked) {
-            blind = 115000;
-            blindL = 95000;
+            blind = 140000;
+            blindL = 110000;
         }
     }
 
