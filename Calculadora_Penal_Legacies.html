@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Calculadora Legacies</title>
+
+    <link rel="sortcut icon" href="https://www.flaticon.com/svg/static/icons/svg/1240/1240279.svg"
+        type="image/x-icon" />
+</head>
+
+<body>
+    <div>
+        <img src="https://cdn.discordapp.com/attachments/971871881072365648/1022007639707750440/cinza.png"
+            style="position: absolute; width: 985px; height: 618px; opacity: 0.5; left: 5px;" />
+        <div>
+            <H1 style="position: absolute; left: 435px; top: -15px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                Legacies</H1>
+            <h3 style="position: absolute; left: 441px; top: 17px; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                Calculadora</h3>
+            <button type="button" onclick="reload()" class="btn-default"
+                style="position: absolute; left: 883px; width: 88px; height: 50px; top: 15px;">Limpar</button>
+
+            <div
+                style="position: absolute; top: 75px; left: 15px; width: 225px; height: 170px; background-color: #C4C4C4;">
+                <h4
+                    style="position: absolute; font-weight: bold; text-align: center; top: -10px; left: 0px; font-size: 16px;  background-color: #929292; height: 30px; width: 225px;">
+                    Infração De Transito
+                </h4>
+                <form style="position: absolute; top: 25px; left: 20px;">
+                    <div class="checkbox">
+                        <label><input id="estacionaLocalProibe" onchange="main()" type="checkbox">Estacinar em Local
+                            Proibido</label>
+                        <label><input id="abandonoVeic" onchange="main()" type="checkbox">Abandono de Veículo</label>
+                        <label><input id="poluiSon" onchange="main()" type="checkbox">Poluição Sonora</label>
+                        <label><input id="direcPerig" onchange="main()" type="checkbox">Direção Perigosa</label>
+                        <label><input id="atropelamento" onchange="main()" type="checkbox">Atropelamento</label>
+                        <label><input id="corrIlegal" onchange="main()" type="checkbox">Corrida Ilegal</label>
+                    </div>
+
+                </form>
+            </div>
+
+            <div
+                style="position: absolute; top: 75px; left: 250px; width: 225px; height: 170px; background-color: #C4C4C4;">
+                <h4
+                    style="position: absolute; font-weight: bold; text-align: center; top: -10px; left: 0px; font-size: 16px;  background-color: #929292; height: 30px; width: 225px;">
+                    Patrimonio Publi. e Priv.
+                </h4>
+                <form style="position: absolute; top: 25px; left: 20px;">
+                    <div class="checkbox">
+                        <label><input id="Furt" onchange="main()" type="checkbox">Furto</label>
+                        <br>
+                        <label><input id="roub" onchange="main()" type="checkbox">Roubo</label>
+                        <label><input id="desPatriPV" onchange="main()" type="checkbox">Destruição ao Patri.
+                            Priv.</label>
+                        <label><input id="desPatriPU" onchange="main()" type="checkbox">Destruição ao Patri.
+                            Pub.</label>
+                        <label><input id="invaPropri" onchange="main()" type="checkbox">Invasão de Propriedade</label>
+                    </div>
+
+                </form>
+            </div>
+
+            <div
+                style="position: absolute; top: 75px; left: 500px; width: 225px; height: 210px; background-color: #C4C4C4;">
+                <h4
+                    style="position: absolute; font-weight: bold; text-align: center; top: -10px; left: 0px; font-size: 16px;  background-color: #929292; height: 30px; width: 225px;">
+                    Econom. Publi. e Priv
+                </h4>
+                <form style="position: absolute; top: 25px; left: 20px;">
+                    <div class="checkbox">
+                        <label><input id="registra" onchange="main()" type="checkbox">Caixa Registradora</label>
+                        <label><input id="eletro" onchange="main()" type="checkbox">Caixa Eletrônico</label>
+                        <label><input id="lojas" onchange="main()" type="checkbox">Cofre de Lojas</label>
+                        <label><input id="fleeca" onchange="main()" type="checkbox">Banco Fleeca</label>
+                        <label><input id="central" onchange="main()" type="checkbox">Banco Central</label>
+                        <label><input id="paleto" onchange="main()" type="checkbox">Banco Paleto</label>
+                        <label><input id="jojo" onchange="main()" type="checkbox">Roubo Joalheria</label>
+                        <label><input id="roubCarroFort" onchange="main()" type="checkbox">Carro Forte</label>
+                    </div>
+
+                </form>
+            </div>
+
+            <div
+                style="position: absolute; top: 75px; left: 745px; width: 225px; height: 315px; background-color: #C4C4C4;">
+                <h4
+                    style="position: absolute; font-weight: bold; text-align: center; top: -10px; left: 0px; font-size: 16px;  background-color: #929292; height: 30px; width: 225px;">
+                    Adm. e Ordem Pub
+                </h4>
+                <form style="position: absolute; top: 25px; left: 20px;">
+                    <div class="checkbox">
+                        <label><input id="assoCrim" onchange="main()" type="checkbox">Associação Criminosa</label>
+                        <label><input id="formQuadri" onchange="main()" type="checkbox">Formação de Quadrilha</label>
+                        <label><input id="trafiDro" onchange="main()" type="checkbox">Tráfico de Drogas</label>
+                        <label><input id="possIleMun" onchange="main()" type="checkbox">Posse Ilegal de Munições</label>
+                        <label><input id="possIleArm" onchange="main()" type="checkbox">Posse Ilegal de Armas</label>
+                        <label><input id="DinheNDecla" onchange="main()" type="checkbox">Dinheiro não Declarado</label>
+                        <label><input id="OcuFaci" onchange="main()" type="checkbox">Ocultação Facial</label>
+                        <label><input id="LavaDin" onchange="main()" type="checkbox">Lavagem de Dinheiro</label>
+                        <label><input id="subProIle" onchange="main()" type="checkbox">Subprodutos Ilícitos</label>
+                        <label><input id="usoIndePor" onchange="main()" type="checkbox">Uso Indevido do Porte</label>
+                        <label><input id="fuAbor" onchange="main()" type="checkbox">Fuga da Abordagem</label>
+                        <label><input id="falseIdeol" onchange="main()" type="checkbox">Falsidade Ideológica</label>
+                    </div>
+
+                </form>
+            </div>
+
+            <div
+                style="position: absolute; top: 400px; left: 625px; width: 225px; height: 100px; background-color: rgb(250, 191, 191)">
+                <h4
+                    style="position: absolute; font-weight: bold; text-align: center; top: -10px; left: 0px; font-size: 16px;  background-color: hsl(0, 74%, 66%); height: 30px; width: 225px;">
+                    Redução
+                </h4>
+                <form style="position: absolute; top: 25px; left: 20px;">
+                    <div class="checkbox">
+                        <label><input id="reuPri" onchange="main()" type="checkbox">Réu Primário</label>
+                        <label><input id="bomComport" onchange="main()" type="checkbox">Bom Comportamento</label>
+                        <label><input id="CrimeNcons" onchange="main()" type="checkbox">Crime não Consumado</label>
+                    </div>
+
+                </form>
+            </div>
+
+            <div
+                style="position: absolute; top: 260px; left: 15px; width: 470px; height: 320px; background-color: #C4C4C4;">
+                <h4
+                    style="position: absolute; font-weight: bold; text-align: center; top: -10px; left: 0px; font-size: 16px;  background-color: #929292; height: 30px; width: 470px;">
+                    Crimes Contra Pessoa
+                </h4>
+                <form style="position: absolute; top: 25px; left: 20px;">
+                    <div class="checkbox">
+                        <div style="position: absolute; width: 200px;">
+                            <label><input id="homiDolos" onchange="main()" type="checkbox">Homicídio Doloso</label>
+                            <label><input id="homiCulp" onchange="main()" type="checkbox">Homicídio Culposo</label>
+                            <label><input id="homiContraPub" onchange="main()" type="checkbox">Homicídio Contra Servidor
+                                Público</label>
+                            <label><input id="geno" onchange="main()" type="checkbox">Genocídio</label>
+                            <label><input id="agregLesaCorp" onchange="main()" type="checkbox">Agressão ou Lesão
+                                Corporal</label>
+                            <label><input id="sequestro" onchange="main()" type="checkbox">Sequestro</label>
+                            <label><input id="omissSocorro" onchange="main()" type="checkbox">Omissão de Socorro</label>
+                            <label><input id="abandonoIncapaz" onchange="main()" type="checkbox">Abandono de
+                                Incapaz</label>
+                            <label><input id="desacato" onchange="main()" type="checkbox">Desacato</label>
+                            </br>
+                            <label><input id="atosObcenos" onchange="main()" type="checkbox">Atos Obscenos</label>
+                            </br>
+                        </div>
+
+                        <div style="position: absolute; width: 200px; left: 230px;">
+
+                            <label><input id="desoOrdeLega" onchange="main()" type="checkbox">Desobedecer Ordem
+                                Legal</label>
+                            <label><input id="tentaSub" onchange="main()" type="checkbox">Tentativa de Suborno</label>
+                            <label><input id="corruPassi" onchange="main()" type="checkbox">Corrupção Passiva</label>
+                            <label><input id="preva" onchange="main()" type="checkbox">Prevaricação</label>
+                            </br>
+                            <label><input id="preju" onchange="main()" type="checkbox">Perjúrio</label>
+                            <label><input id="denunCalun" onchange="main()" type="checkbox">Denunciação
+                                Caluniosa</label>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+
+
+            <div
+                style="position: absolute; top: 312px; left: 518px; width: 190px; height: 77px; background-color:#C4C4C4">
+                <form>
+                    <div class="form-group">
+                        <label for="usr">Quantidade dinheiro Sujo:</label>
+                        <input onkeyup="main()" onchange="main()" id="quantSujo" type="number"  autocomplete="off" min="0" class="form-control"
+                            style="position: absolute; width: 160px; left: 15px" value="0" id="usr">
+                    </div>
+                </form>
+
+            </div>
+
+
+
+
+            <form>
+                <div class="input-group" style="position: absolute; width: 320px; top: 505px; left: 570px;">
+                    <span class="input-group-addon">Tem. Pena:</span>
+                    <input id="totalPena" type="text" readonly class="form-control" disabled name="msg" placeholder="0">
+                </div>
+                <div class="input-group" style="position: absolute; width: 320px; top: 542px; left: 570px;">
+                    <span class="input-group-addon">Valor Multa:</span>
+                    <input id="totalMult" type="text" readonly class="form-control" disabled name="msg" placeholder="0">
+                </div>
+                <div class="input-group" style="position: absolute; width: 320px; top: 579px; left: 570px;">
+                    <span class="input-group-addon">Fiança:</span>
+                    <input id="totalFianca" type="text" readonly class="form-control" disabled name="msg"
+                        placeholder="0">
+                </div>
+            </form>
+
+        </div>
+        <div>
+        </div>
+    </div>
+
+    <label style="position: absolute; top: 590px; left: 20px; font-size: 13px;"> ATUALIZADO: 21/09/2022</label>
+
+</body>
+
+<script>
+    //Discord Alisson#6802
+
+    // variaveis
+    var estacionarLocProibMult = 500;
+    var abandonoVeicPessMult = 200;
+    var poluicaiSonoMult = 800;
+    var direcaoPerigMult = 500;
+    var atropelamentoMult = 800;
+
+    //Corrida Ilegal
+    let corridaIlegal = {
+        pena: 30,
+        multa: 1000
+    }
+
+    //Crimes Contra Pessoa
+    let homiDolos = {
+        pena: 50,
+        multa: 6000,
+        fianca: 0
+    }
+
+    let homiCulp = {
+        pena: 35,
+        multa: 2000,
+        fianca: 4000
+    }
+
+    let homiContraServPub = {
+        pena: 60,
+        multa: 7000,
+        fianca: 0
+    }
+
+    let genocidio = {
+        pena: 80,
+        multa: 10000,
+        fianca: 0
+    }
+
+    let agressao = {
+        pena: 20,
+        multa: 1000,
+        fianca: 2000
+    }
+
+    let sequestro = {
+        pena: 80,
+        multa: 10000,
+        fianca: 0
+    }
+
+    let omissaoSocorro = {
+        pena: 20,
+        multa: 500,
+        fianca: 2000
+    }
+
+    let abandonoIncapaz = {
+        pena: 40,
+        multa: 1000,
+        fianca: 0
+    }
+
+    let desacato = {
+        pena: 10,
+        multa: 500,
+        fianca: 0
+    }
+
+    let atosObceno = {
+        pena: 10,
+        multa: 500,
+        fianca: 1000
+    }
+
+    let desobOrdemLegal = {
+        pena: 20,
+        multa: 500,
+        fianca: 0
+    }
+
+    let tentSuborno = {
+        pena: 20,
+        multa: 1000,
+        fianca: 0
+    }
+
+    let corrupPassiva = {
+        pena: 50,
+        multa: 1200,
+        fianca: 0
+    }
+
+    let prevaricacao = {
+        pena: 20,
+        multa: 2000,
+        fianca: 0
+    }
+
+    let perjurio = {
+        pena: 40,
+        multa: 2000,
+        fianca: 0
+    }
+
+    let denunCalun = {
+        pena: 30,
+        multa: 2000,
+        fianca: 30000
+    }
+
+    //Crimes Contra Pratimonio Publico E Privado
+    let furto = {
+        pena: 30,
+        multa: 500,
+        fianca: 3000
+    }
+
+    let roubo = {
+        pena: 40,
+        multa: 1000,
+        fianca: 0
+    }
+
+    let destruicaoPatriPriv = {
+        pena: 10,
+        multa: 500,
+        fianca: 0
+    }
+
+    let destruicaoPatriPubli = {
+        pena: 20,
+        multa: 800,
+        fianca: 0
+    }
+
+    let invasaoProp = {
+        pena: 30,
+        multa: 1000,
+        fianca: 3000
+    }
+
+    //Crimes Contra economia Publico E Privado
+    let roubRegistradora = {
+        pena: 10,
+        multa: 200,
+        fianca: 1000
+    }
+
+    let roubCaixEletronic = {
+        pena: 20,
+        multa: 200,
+        fianca: 2000
+    }
+
+    let roubCofreLojas = {
+        pena: 30,
+        multa: 1500,
+        fianca: 3000
+    }
+
+    let bancoFleca = {
+        pena: 60,
+        multa: 5000,
+        fianca: 6000
+    }
+
+    let bancoCentral = {
+        pena: 80,
+        multa: 15000,
+        fianca: 6000
+    }
+
+    let bancoPaleto = {
+        pena: 70,
+        multa: 4000,
+        fianca: 0
+    }
+
+    let roubJoalheria = {
+        pena: 60,
+        multa: 4000,
+        fianca: 0
+    }
+
+    let roubCarroFort = {
+        pena: 50,
+        multa: 3000,
+        fianca: 0
+    }
+
+
+    // Contra Administração e Ordem Publica
+
+
+    let assocCriminosa = {
+        pena: 20,
+        multa: 500,
+        fianca: 0
+    }
+
+    let trafiDrogas = {
+        pena: 30,
+        multa: 1000,
+        fianca: 0
+    }
+
+    let formQuadri = {
+        pena: 40,
+        multa: 1000,
+        fianca: 0
+    }
+
+    let possMuni = {
+        pena: 45,
+        multa: 500,
+        fianca: 0
+    }
+
+    let possArmas = {
+        pena: 50,
+        multa: 1000,
+        fianca: 0
+    }
+
+    let ocultFacial = {
+        pena: 20,
+        multa: 500,
+        fianca: 2000
+    }
+
+    let subProdIlici = {
+        pena: 20,
+        multa: 500,
+        fianca: 2000
+    }
+
+    let usoIndevPort = {
+        pena: 30,
+        multa: 1000,
+        fianca: 3000
+    }
+
+    let fugaAbord = {
+        pena: 10,
+        multa: 500,
+        fianca: 1000
+    }
+
+    let falseIdeologica = {
+        pena: 40,
+        multa: 1000,
+        fianca: 4000
+    }
+
+
+    //html
+    let estacionarLocProib = document.getElementById("estacionaLocalProibe");
+    let abandonoVeic = document.getElementById("abandonoVeic");
+    let poluiSon = document.getElementById("poluiSon");
+    let direcPerig = document.getElementById("direcPerig");
+    let atropelamento = document.getElementById("atropelamento");
+    let corrIlegal = document.getElementById("corrIlegal");
+    let Furt = document.getElementById("Furt");
+    let roub = document.getElementById("roub");
+    let desPatriPV = document.getElementById("desPatriPV");
+    let desPatriPU = document.getElementById("desPatriPU");
+    let invaPropri = document.getElementById("invaPropri");
+    let registra = document.getElementById("registra");
+    let eletro = document.getElementById("eletro");
+    let lojas = document.getElementById("lojas");
+    let fleeca = document.getElementById("fleeca");
+    let central = document.getElementById("central");
+    let paleto = document.getElementById("paleto");
+    let jojo = document.getElementById("jojo");
+    let roubCarroFortVar = document.getElementById("roubCarroFort");
+    let assoCrim = document.getElementById("assoCrim");
+    let trafiDro = document.getElementById("trafiDro");
+    let possIleMun = document.getElementById("possIleMun");
+    let possIleArm = document.getElementById("possIleArm");
+    let OcuFaci = document.getElementById("OcuFaci");
+    let subProIle = document.getElementById("subProIle");
+    let fuAbor = document.getElementById("fuAbor");
+    let falseIdeol = document.getElementById("falseIdeol");
+    let reuPri = document.getElementById("reuPri");
+    let bomComport = document.getElementById("bomComport");
+    let CrimeNcons = document.getElementById("CrimeNcons");
+    let homiDolosVar = document.getElementById("homiDolos");
+    let homiCulpVar = document.getElementById("homiCulp");
+    let homiContraPub = document.getElementById("homiContraPub");
+    let geno = document.getElementById("geno");
+    let agregLesaCorp = document.getElementById("agregLesaCorp");
+    let sequestroVar = document.getElementById("sequestro");
+    let omissSocorro = document.getElementById("omissSocorro");
+    let abandonoIncapazVar = document.getElementById("abandonoIncapaz");
+    let calunDifamasInj = document.getElementById("calunDifamasInj");
+    let desacatoVar = document.getElementById("desacato");
+    let atosObcenos = document.getElementById("atosObcenos");
+    let ameac = document.getElementById("ameac");
+    let desoOrdeLega = document.getElementById("desoOrdeLega");
+    let tentaSub = document.getElementById("tentaSub");
+    let corruPassi = document.getElementById("corruPassi");
+    let preva = document.getElementById("preva");
+    let preju = document.getElementById("preju");
+    let denunCalunVar = document.getElementById("denunCalun");
+    let quantSujo = document.getElementById("quantSujo");
+    let totalPena = document.getElementById("totalPena");
+    let totalMult = document.getElementById("totalMult");
+    let totalFianca = document.getElementById("totalFianca");
+
+
+
+
+    function main() {
+        let totalPenaVar = 0;
+        let totalMultVar = 0;
+        let totalFiancVar = 0;
+
+        if (estacionarLocProib.checked) {
+            totalMultVar += estacionarLocProibMult;
+        } else {
+            totalMultVar += 0;
+        }
+
+        if (abandonoVeic.checked) {
+            totalMultVar += abandonoVeicPessMult;
+        } else {
+            totalMultVar += 0;
+        }
+
+        if (poluiSon.checked) {
+            totalMultVar += poluicaiSonoMult;
+        } else {
+            totalMultVar += 0;
+        }
+
+        if (direcPerig.checked) {
+            totalMultVar += direcaoPerigMult;
+        } else {
+            totalMultVar += 0;
+        }
+
+        if (atropelamento.checked) {
+            totalMultVar += atropelamentoMult;
+        } else {
+            totalMultVar += 0;
+        }
+
+        if (corrIlegal.checked) {
+            totalMultVar += corridaIlegal.multa;
+            totalPenaVar += corridaIlegal.pena;
+            totalFiancVar += corridaIlegal.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (Furt.checked) {
+            totalMultVar += furto.multa;
+            totalPenaVar += furto.pena;
+            totalFiancVar += furto.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (roub.checked) {
+            totalMultVar += roubo.multa;
+            totalPenaVar += roubo.pena;
+            totalFiancVar += roubo.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (desPatriPV.checked) {
+            totalMultVar += destruicaoPatriPriv.multa;
+            totalPenaVar += destruicaoPatriPriv.pena;
+            totalFiancVar += destruicaoPatriPriv.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (desPatriPU.checked) {
+            totalMultVar += destruicaoPatriPubli.multa;
+            totalPenaVar += destruicaoPatriPubli.pena;
+            totalFiancVar += destruicaoPatriPubli.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (invaPropri.checked) {
+            totalMultVar += invasaoProp.multa;
+            totalPenaVar += invasaoProp.pena;
+            totalFiancVar += invasaoProp.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (registra.checked) {
+            totalMultVar += roubRegistradora.multa;
+            totalPenaVar += roubRegistradora.pena;
+            totalFiancVar += roubRegistradora.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (eletro.checked) {
+            totalMultVar += roubCaixEletronic.multa;
+            totalPenaVar += roubCaixEletronic.pena;
+            totalFiancVar += roubCaixEletronic.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (lojas.checked) {
+            totalMultVar += roubCofreLojas.multa;
+            totalPenaVar += roubCofreLojas.pena;
+            totalFiancVar += roubCofreLojas.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (fleeca.checked) {
+            totalMultVar += bancoFleca.multa;
+            totalPenaVar += bancoFleca.pena;
+            totalFiancVar += bancoFleca.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (central.checked) {
+            totalMultVar += bancoCentral.multa;
+            totalPenaVar += bancoCentral.pena;
+            totalFiancVar += bancoCentral.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (paleto.checked) {
+            totalMultVar += bancoPaleto.multa;
+            totalPenaVar += bancoPaleto.pena;
+            totalFiancVar += bancoPaleto.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (jojo.checked) {
+            totalMultVar += roubJoalheria.multa;
+            totalPenaVar += roubJoalheria.pena;
+            totalFiancVar += roubJoalheria.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (roubCarroFortVar.checked) {
+            totalMultVar += roubCarroFort.multa;
+            totalPenaVar += roubCarroFort.pena;
+            totalFiancVar += roubCarroFort.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (assoCrim.checked) {
+            totalMultVar += assocCriminosa.multa;
+            totalPenaVar += assocCriminosa.pena;
+            totalFiancVar += assocCriminosa.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (trafiDro.checked) {
+            totalMultVar += trafiDrogas.multa;
+            totalPenaVar += trafiDrogas.pena;
+            totalFiancVar += trafiDrogas.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (possIleMun.checked) {
+            totalMultVar += possMuni.multa;
+            totalPenaVar += possMuni.pena;
+            totalFiancVar += possMuni.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (possIleArm.checked) {
+            totalMultVar += possArmas.multa;
+            totalPenaVar += possArmas.pena;
+            totalFiancVar += possArmas.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (OcuFaci.checked) {
+            totalMultVar += ocultFacial.multa;
+            totalPenaVar += ocultFacial.pena;
+            totalFiancVar += ocultFacial.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (subProIle.checked) {
+            totalMultVar += subProdIlici.multa;
+            totalPenaVar += subProdIlici.pena;
+            totalFiancVar += subProdIlici.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (fuAbor.checked) {
+            totalMultVar += fugaAbord.multa;
+            totalPenaVar += fugaAbord.pena;
+            totalFiancVar += fugaAbord.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (falseIdeol.checked) {
+            totalMultVar += falseIdeologica.multa;
+            totalPenaVar += falseIdeologica.pena;
+            totalFiancVar += falseIdeologica.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (homiDolosVar.checked) {
+            totalMultVar += homiDolos.multa;
+            totalPenaVar += homiDolos.pena;
+            totalFiancVar += homiDolos.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (homiCulpVar.checked) {
+            totalMultVar += homiCulp.multa;
+            totalPenaVar += homiCulp.pena;
+            totalFiancVar += homiCulp.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (homiContraPub.checked) {
+            totalMultVar += homiContraServPub.multa;
+            totalPenaVar += homiContraServPub.pena;
+            totalFiancVar += homiContraServPub.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (geno.checked) {
+            totalMultVar += genocidio.multa;
+            totalPenaVar += genocidio.pena;
+            totalFiancVar += genocidio.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (agregLesaCorp.checked) {
+            totalMultVar += agressao.multa;
+            totalPenaVar += agressao.pena;
+            totalFiancVar += agressao.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (sequestroVar.checked) {
+            totalMultVar += sequestro.multa;
+            totalPenaVar += sequestro.pena;
+            totalFiancVar += sequestro.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (omissSocorro.checked) {
+            totalMultVar += omissaoSocorro.multa;
+            totalPenaVar += omissaoSocorro.pena;
+            totalFiancVar += omissaoSocorro.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (abandonoIncapazVar.checked) {
+            totalMultVar += abandonoIncapaz.multa;
+            totalPenaVar += abandonoIncapaz.pena;
+            totalFiancVar += abandonoIncapaz.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (desacatoVar.checked) {
+            totalMultVar += desacato.multa;
+            totalPenaVar += desacato.pena;
+            totalFiancVar += desacato.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (atosObcenos.checked) {
+            totalMultVar += atosObceno.multa;
+            totalPenaVar += atosObceno.pena;
+            totalFiancVar += atosObceno.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (desoOrdeLega.checked) {
+            totalMultVar += desobOrdemLegal.multa;
+            totalPenaVar += desobOrdemLegal.pena;
+            totalFiancVar += desobOrdemLegal.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (tentaSub.checked) {
+            totalMultVar += tentSuborno.multa;
+            totalPenaVar += tentSuborno.pena;
+            totalFiancVar += tentSuborno.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (corruPassi.checked) {
+            totalMultVar += corrupPassiva.multa;
+            totalPenaVar += corrupPassiva.pena;
+            totalFiancVar += corrupPassiva.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (preva.checked) {
+            totalMultVar += prevaricacao.multa;
+            totalPenaVar += prevaricacao.pena;
+            totalFiancVar += prevaricacao.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (preju.checked) {
+            totalMultVar += perjurio.multa;
+            totalPenaVar += perjurio.pena;
+            totalFiancVar += perjurio.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (denunCalunVar.checked) {
+            totalMultVar += denunCalun.multa;
+            totalPenaVar += denunCalun.pena;
+            totalFiancVar += denunCalun.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (quantSujo.value > 0) {
+            let totalSujo = quantSujo.value / 5000;
+            totalPenaVar += 20 + (2 * Math.floor(totalSujo));
+            totalMultVar += 2000 + (500 * Math.floor(totalSujo));
+            totalFiancVar += 0;
+        } else {
+            totalPenaVar += 0;
+            totalMultVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (denunCalunVar.checked) {
+            totalMultVar += denunCalun.multa;
+            totalPenaVar += denunCalun.pena;
+            totalFiancVar += denunCalun.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (totalPenaVar > 100) {
+            totalPenaVar = 100;
+        }
+
+        if (reuPri.checked) {
+            let porc = totalPenaVar * 0.2
+            totalPenaVar = totalPenaVar - porc;
+        }
+
+        if (bomComport.checked) {
+            let porc = totalPenaVar * 0.2
+            totalPenaVar = totalPenaVar - porc;
+        }
+
+        if (CrimeNcons.checked) {
+            let porc = totalPenaVar * 0.5
+            totalPenaVar = totalPenaVar - porc;
+        }
+
+        totalPena.value = (totalPenaVar).toLocaleString('pt-BR');
+        totalMult.value = (totalMultVar).toLocaleString('pt-BR');
+        totalFianca.value = (totalFianc).toLocaleString('pt-BR');
+    }
+
+    function calculaVisual() {
+
+        if (turboCheck.checked) {
+            turbo = 30000;
+            turboL = 15500;
+        } else {
+            turbo = 0;
+            turboL = 0;
+        }
+        if (buzinaCheck.checked) {
+            buzina = 4000;
+            buzinaL = 2700;
+        } else {
+            buzina = 0;
+            buzinaL = 0;
+        }
+        if (xenonCheck.checked) {
+            xenon = 3000;
+            xenonL = 2700;
+        } else {
+            xenon = 0;
+            xenonL = 0;
+        }
+        if (neonCheck.checked) {
+            neon = 4000;
+            neonL = 2700;
+        } else {
+            neon = 0;
+            neonL = 0;
+        }
+        if (rodasCheck.checked) {
+            roda = 10000;
+            rodaL = 7200;
+        } else {
+            roda = 0;
+            rodaL = 0;
+        }
+        if (corRodasCheck.checked) {
+            corRodas = 2000;
+            corRodasL = 700;
+        } else {
+            corRodas = 0;
+            corRodasL = 0;
+        }
+        if (acessRodasCheck.checked) {
+            acessRodas = 4000;
+            acessRodasL = 2700;
+        } else {
+            acessRodas = 0;
+            acessRodasL = 0;
+        }
+        if (pintPriCheck.checked) {
+            corPri = 4000;
+            corPriL = 0;
+        } else {
+            corPri = 0;
+            corPriL = 0;
+        }
+        if (pintSecCheck.checked) {
+            corSec = 4000;
+            corSecL = 0;
+        } else {
+            corSec = 0;
+            corSecL = 0;
+        }
+        if (placaCheck.checked) {
+            placas = 2000;
+            placasL = 1700;
+        } else {
+            placas = 0;
+            placasL = 0;
+        }
+    }
+
+
+
+    function reload() {
+        location.reload();
+    }
+
+
+
+
+</script>
+
+</html>
