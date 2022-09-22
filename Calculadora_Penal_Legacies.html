@@ -947,7 +947,7 @@
         if (quantSujo.value > 0) {
             let totalSujo = quantSujo.value / 5000;
             totalPenaVar += 20 + (2 * Math.floor(totalSujo));
-            totalMultVar += quantSujo.value;
+            totalMultVar += parseInt(quantSujo.value);
             totalFiancVar += 0;
         } else {
             totalPenaVar += 0;
