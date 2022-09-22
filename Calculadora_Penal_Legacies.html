@@ -122,7 +122,7 @@
                     <div class="checkbox">
                         <label><input id="reuPri" onchange="main()" type="checkbox">Réu Primário</label>
                         <label><input id="bomComport" onchange="main()" type="checkbox">Bom Comportamento</label>
-                        <label><input id="CrimeNcons" onchange="main()" type="checkbox">Crime não Consumado</label>
+                        <label><input id="CrimeNcons" onchange="main()" type="checkbox">Crime Não Consumado</label>
                     </div>
 
                 </form>
@@ -177,7 +177,7 @@
                 style="position: absolute; top: 312px; left: 518px; width: 190px; height: 77px; background-color:#C4C4C4">
                 <form>
                     <div class="form-group">
-                        <label for="usr">Quantidade dinheiro Sujo:</label>
+                        <label for="usr">Quantidade Dinheiro Sujo:</label>
                         <input onkeyup="main()" onchange="main()" id="quantSujo" type="number"  autocomplete="off" min="0" class="form-control"
                             style="position: absolute; width: 160px; left: 15px" value="0" id="usr">
                     </div>
@@ -190,7 +190,7 @@
 
             <form>
                 <div class="input-group" style="position: absolute; width: 320px; top: 505px; left: 570px;">
-                    <span class="input-group-addon">Tem. Pena:</span>
+                    <span class="input-group-addon">Temp. Pena:</span>
                     <input id="totalPena" type="text" readonly class="form-control" disabled name="msg" placeholder="0">
                 </div>
                 <div class="input-group" style="position: absolute; width: 320px; top: 542px; left: 570px;">
@@ -984,7 +984,7 @@
             totalPenaVar = totalPenaVar - porc;
         }
 
-        totalPena.value = (totalPenaVar).toLocaleString('pt-BR');
+        totalPena.value = (Math.floor(totalPenaVar)).toLocaleString('pt-BR');
         totalMult.value = (totalMultVar).toLocaleString('pt-BR');
         totalFianca.value = (totalFiancVar).toLocaleString('pt-BR');
     }
