@@ -525,7 +525,8 @@
     let totalPena = document.getElementById("totalPena");
     let totalMult = document.getElementById("totalMult");
     let totalFianca = document.getElementById("totalFianca");
-
+    let formQuadriVar = document.getElementById("formQuadri");
+    
 
 
 
@@ -568,6 +569,16 @@
             totalMultVar += corridaIlegal.multa;
             totalPenaVar += corridaIlegal.pena;
             totalFiancVar += corridaIlegal.fianca;
+        } else {
+            totalMultVar += 0;
+            totalPenaVar += 0;
+            totalFiancVar += 0;
+        }
+
+        if (formQuadriVar.checked) {
+            totalMultVar += formQuadri.multa;
+            totalPenaVar += formQuadri.pena;
+            totalFiancVar += formQuadri.fianca;
         } else {
             totalMultVar += 0;
             totalPenaVar += 0;
