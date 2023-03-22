@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dev. Alisson Andrade</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+
+    <div class="container">
+        <p id="name">Alisson Andrade</p>
+        <div class="subContainer">
+          <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+        </div>
+    </div>
+    <nav>
+      <ul class="wrapper">
+        <li class="icon linkedin">
+            <span class="tooltip" id="linkedin-tooltip"></span>
+            <span><i class="fab fa-linkedin"></i></span>
+        </li>
+        <li class="icon github">
+            <span class="tooltip" id="github-tooltip"></span>
+            <span><i class="fab fa-github"></i></span>
+        </li>
+        <li class="icon instagram">
+            <span class="tooltip" id="instagram-tooltip"></span>
+            <span><i class="fab fa-instagram"></i></span>
+        </li>
+        <li class="icon email">
+          <span class="tooltip" id="email-tooltip"></span>
+          <span><i class="far fa-envelope"></i></span>
+      </li>
+      </ul>
+    </nav>
+    <div class="language-toggle">
+      <button class="toggle-btn active" data-lang="pt-br"><i class="fas fa-globe-americas"></i> PT-BR</button>
+      <button class="toggle-btn" data-lang="en"><i class="fas fa-globe-europe"></i> EN</button>
+    </div>
+  </header>
+</body>
+
+
+<script>
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const ptTextArray = ["Programador", "Músico", "Gamer", "Marido", "Pai"];
+const enTextArray = ["Programmer", "Musician", "Gamer", "Husband", "Father"];
+
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 2000;
+
+let textArrayIndex = 0;
+let charIndex = 0;
+
+let language = "pt-br";
+
+function type() {
+  let textArray = (language === "pt-br") ? ptTextArray : enTextArray;
+
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  let textArray = (language === "pt-br") ? ptTextArray : enTextArray;
+
+  if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  let textArray = (language === "pt-br") ? ptTextArray : enTextArray;
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+const toggleBtns = document.querySelectorAll(".toggle-btn");
+
+toggleBtns.forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    if (btn.classList.contains("active")) {
+      return;
+    }
+
+    toggleBtns.forEach(function(otherBtn) {
+      otherBtn.classList.toggle("active");
+    });
+
+    if (btn.dataset.lang === "pt-br") {
+      language = "pt-br";
+    } else if (btn.dataset.lang === "en") {
+      language = "en";
+    }
+
+    charIndex = 0;
+    textArrayIndex = 0;
+    typedTextSpan.textContent = "";
+    cursorSpan.classList.remove("typing");
+
+    let textArray = (language === "pt-br") ? ptTextArray : enTextArray;
+    setTimeout(type, newTextDelay);
+  });
+});
+
+</script>
+</html>
