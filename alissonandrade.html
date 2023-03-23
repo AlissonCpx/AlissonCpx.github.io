@@ -18,19 +18,19 @@
     </div>
     <nav>
       <ul class="wrapper">
-        <li class="icon linkedin">
+        <li onclick="openLink('https://www.linkedin.com/in/alissonbaadeandrade/')" class="icon linkedin">
             <span class="tooltip" id="linkedin-tooltip"></span>
             <span><i class="fab fa-linkedin"></i></span>
         </li>
-        <li class="icon github">
+        <li onclick="openLink('https://github.com/AlissonCpx')" class="icon github">
             <span class="tooltip" id="github-tooltip"></span>
             <span><i class="fab fa-github"></i></span>
         </li>
-        <li class="icon instagram">
+        <li onclick="openLink('https://www.instagram.com/a_lissonandrade/')" class="icon instagram">
             <span class="tooltip" id="instagram-tooltip"></span>
             <span><i class="fab fa-instagram"></i></span>
         </li>
-        <li class="icon email">
+        <li onclick="openLink('mailto:alissondeandrade1@gmail.com')" class="icon email">
           <span class="tooltip" id="email-tooltip"></span>
           <span><i class="far fa-envelope"></i></span>
       </li>
@@ -45,6 +45,11 @@
 
 
 <script>
+function openLink(link) {
+window.open(link, '_blank')
+}
+
+
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
